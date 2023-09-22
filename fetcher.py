@@ -31,4 +31,5 @@ if __name__ == '__main__':
     fetcher = BugFetcher()
     ids = fetcher.fetch_ids(url)
     print(ids)
-    # fetcher.close()  # Temporarily comment this out to see the browser's state after execution
+    # fetcher.close()  see the browser status
+
