@@ -132,14 +132,15 @@ def fetch_and_save_html(url, folder_path, id_):
         # 整合常规DOM内容和Shadow DOM内容
         all_content = regular_dom_content + "\n\n" + "\n".join(shadow_contents)
 
-        with open(os.path.join(folder_path, f'{id_}11.txt'), 'w', encoding='utf-8') as f:
+        with open(os.path.join(folder_path, f'{id_}.txt'), 'w', encoding='utf-8') as f:
             f.write(all_content)
 
 
 def main():
-    project_folder = "/Users/jiachengding/PycharmProjects/bug_report_webcrawler"
+    project_folder = "/home/jiacheng/PycharmProjects/bug_report_webcrawler"
     bugreport_folder = os.path.join(project_folder, 'bugreport')
     urls_file_path = os.path.join(project_folder, 'ids_urls.txt')
+
 
     with open(urls_file_path, 'r') as f:
         urls = [url.strip() for url in f.readlines()]
@@ -152,7 +153,7 @@ def main():
             os.makedirs(folder_path_for_id)
 
         fetch_and_save_html(url, folder_path_for_id, id_)
-        print(f"Saved content for {id_} in {folder_path_for_id}/{id_}11.txt")
+        print(f"Saved content for {id_} in {folder_path_for_id}/{id_}.txt")
 
 if __name__ == '__main__':
     main()

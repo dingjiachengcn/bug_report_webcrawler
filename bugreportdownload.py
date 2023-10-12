@@ -31,7 +31,7 @@ def main():
             urls.append(generate_url_for_id(id_, start_index))
 
     # 写入URL到文件
-    urls_file_path = os.path.join(project_folder, 'ids_urls.txt')
+    urls_file_path = os.path.join(project_folder, 'bugreport/ids_urls.txt')
     with open(urls_file_path, 'w') as f:
         for url in urls:
             f.write(url + '\n')

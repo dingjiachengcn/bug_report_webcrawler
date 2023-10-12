@@ -39,7 +39,7 @@ def main():
     ids = extract_ids_from_text(content)
 
     # 指定保存到项目文件夹的路径
-    project_folder = "/Users/jiachengding/PycharmProjects/bug_report_webcrawler"
+    project_folder = "/home/jiacheng/bugreport"
     csv_filename = os.path.join(project_folder, 'ids.csv')
 
     # 将ID写入CSV文件
