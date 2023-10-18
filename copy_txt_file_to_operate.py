@@ -8,10 +8,10 @@ bugreport_folder = "/home/jiacheng/PycharmProjects/bug_report_webcrawler/bugrepo
 for subdir, dirs, files in os.walk(bugreport_folder):
     for file in files:
         # 检查文件是否为txt文件
-        if file.endswith('.txt'):
+        if file.endswith('all.txt'):
             original_file_path = os.path.join(subdir, file)
             # 创建新文件名（加上'copy'后缀）
-            new_file_name = file.replace('.txt', 'copy.txt')
+            new_file_name = file.replace('all.txt', 'copy.txt')
             new_file_path = os.path.join(subdir, new_file_name)
 
             # 复制文件
